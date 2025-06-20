@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de Primeros Auxilios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --color-emergencia: #dc3545;
+            --color-informativo: #17a2b8;
+            --color-exito: #28a745;
+            --color-advertencia: #ffc107;
+            --fondo-claro: #f8f9fa;
+            --texto-oscuro: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--color-emergencia);
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: var(--color-emergencia);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--color-emergencia);
+            border-bottom: 2px solid var(--color-emergencia);
+            padding-bottom: 5px;
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--color-informativo);
+            margin-top: 25px;
+            font-size: 1.4rem;
+        }
+        
+        .numeros-emergencia {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .numeros-emergencia th {
+            background-color: rgba(220, 53, 69, 0.2);
+            padding: 12px;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--color-emergencia);
+        }
+        
+        .numeros-emergencia td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .numero-emergencia {
+            color: var(--color-emergencia);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .consejo-rapido {
+            border-left: 4px solid var(--color-informativo);
+            background-color: rgba(23, 162, 184, 0.1);
+            padding: 12px 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        .advertencia {
+            color: var(--color-emergencia);
+            background-color: rgba(220, 53, 69, 0.1);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: inline-block;
+            width: 100%;
+            border-left: 4px solid var(--color-emergencia);
+        }
+        
+        .informacion-importante {
+            color: var(--color-informativo);
+            background-color: rgba(23, 162, 184, 0.1);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: inline-block;
+            width: 100%;
+            border-left: 4px solid var(--color-informativo);
+        }
+        
+        .paso-emergencia {
+            margin-bottom: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .lista-primeros-auxilios {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .lista-primeros-auxilios li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .lista-primeros-auxilios li:before {
+            content: "•";
+            color: var(--color-informativo);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 5px;
+            top: -3px;
+        }
+        
+        .contenedor-imagen {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .imagen-guia {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: block;
+        }
+        
+        .leyenda-imagen {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .boton-adultos-mayores {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--color-informativo);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        
+        .boton-adultos-mayores:hover {
+            background-color: var(--color-emergencia);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .lista-primeros-auxilios li {
+                padding-left: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-first-aid"></i> Guía Completa de Primeros Auxilios</h1>
+        <p style="color: var(--texto-oscuro); font-size: 1.1rem;">Cómo actuar ante accidentes y emergencias comunes</p>
+    </header>
+
+    <section>
+        <h2><i class="fas fa-phone-alt"></i> Teléfonos de Emergencia</h2>
+        <table class="numeros-emergencia">
+            <tr>
+                <th colspan="2">NÚMEROS IMPORTANTES</th>
+            </tr>
+            <tr>
+                <td><strong>Emergencias generales</strong></td>
+                <td><span class="numero-emergencia">911</span> (México y varios países)</td>
+            </tr>
+            <tr>
+                <td><strong>Policía</strong></td>
+                <td><span class="numero-emergencia">911</span> o número local</td>
+            </tr>
+            <tr>
+                <td><strong>Ambulancia / Cruz Roja</strong></td>
+                <td><span class="numero-emergencia">911</span> o <span class="numero-emergencia">065</span></td>
+            </tr>
+            <tr>
+                <td><strong>Bomberos</strong></td>
+                <td><span class="numero-emergencia">911</span> o <span class="numero-emergencia">068</span></td>
+            </tr>
+            <tr>
+                <td><strong>Intoxicaciones</strong></td>
+                <td><span class="numero-emergencia">01-800-00-222-22</span> (Centro de Toxicología)</td>
+            </tr>
+            <tr>
+                <td><strong>Crisis emocionales</strong></td>
+                <td><span class="numero-emergencia">800 911 2000</span> (Línea de la Vida)</td>
+            </tr>
+        </table>
+
+        <div class="consejo-rapido">
+            <b>Consejo importante:</b> Guarda estos números en tu teléfono y enséñaselos a todos en tu familia.
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fas fa-medkit"></i> Accidentes Comunes y Qué Hacer</h2>
+
+        <div class="paso-emergencia">
+            <h3><i class="fas fa-heartbeat"></i> Paro Cardíaco</h3>
+            <ul class="lista-primeros-auxilios">
+                <li><strong>1. Verifica seguridad:</strong> Asegúrate que el área es segura para ti y la víctima</li>
+                <li><strong>2. Llama a emergencias:</strong> Marca <span class="numero-emergencia">911</span> inmediatamente</li>
+                <li><strong>3. Comienza RCP:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Coloca el talón de una mano en el centro del pecho</li>
+                        <li>Pon tu otra mano encima y entrelaza tus dedos</li>
+                        <li>Realiza compresiones fuertes y rápidas (100-120 por minuto)</li>
+                        <li>Permite que el pecho se eleve completamente entre compresiones</li>
+                    </ul>
+                </li>
+                <li><strong>4. Usa DEA si disponible:</strong> Sigue las instrucciones del dispositivo</li>
+                <li><strong>5. Continúa hasta que:</strong> Llegue ayuda médica o la persona reaccione</li>
+            </ul>
+            <div class="advertencia">
+                <i class="fas fa-exclamation-triangle"></i> <strong>Importante:</strong> Incluso si no estás seguro de cómo hacer RCP perfectamente, es mejor intentarlo que no hacer nada.
+            </div>
+        </div>
+
+        <div class="paso-emergencia">
+            <h3><i class="fas fa-burn"></i> Quemaduras</h3>
+            <ul class="lista-primeros-auxilios">
+                <li><strong>1. Enfría la quemadura:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Usa agua corriente a temperatura ambiente (no fría)</li>
+                        <li>Durante 10-15 minutos para quemaduras menores</li>
+                        <li>20 minutos para quemaduras químicas</li>
+                    </ul>
+                </li>
+                <li><strong>2. Retira objetos ajustados:</strong> Anillos, relojes antes de que aparezca hinchazón</li>
+                <li><strong>3. Cubre la zona:</strong> Con gasa estéril o paño limpio (no algodón)</li>
+                <li><strong>4. No uses remedios caseros:</strong> Evita hielo, mantequilla, aceites, pasta de dientes</li>
+                <li><strong>5. Busca ayuda médica si:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>La quemadura es mayor que la palma de la mano</li>
+                        <li>Hay ampollas grandes o piel carbonizada</li>
+                        <li>Es en cara, manos, pies, genitales o articulaciones</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="consejo-rapido">
+                <b>Prevención:</b> Gira los mangos de las ollas hacia atrás en la cocina y mantén a niños lejos de líquidos calientes.
+            </div>
+        </div>
+
+        <div class="paso-emergencia">
+            <h3><i class="fas fa-tint"></i> Hemorragias</h3>
+            <ul class="lista-primeros-auxilios">
+                <li><strong>1. Protege tus manos:</strong> Usa guantes si están disponibles</li>
+                <li><strong>2. Posición:</strong> Acuesta a la persona y eleva la herida sobre el corazón</li>
+                <li><strong>3. Aplica presión directa:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Usa gasa limpia o paño</li>
+                        <li>Mantén presión constante por 5-10 minutos</li>
+                        <li>No retires el paño para verificar (añade más si se empapa)</li>
+                    </ul>
+                </li>
+                <li><strong>4. Para sangrado grave:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Considera torniquete solo para extremidades</li>
+                        <li>Anota la hora de aplicación del torniquete</li>
+                    </ul>
+                </li>
+                <li><strong>5. Busca ayuda médica si:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>El sangrado no se detiene después de 10 minutos</li>
+                        <li>La herida es profunda o grande</li>
+                        <li>Hay objeto incrustado</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="informacion-importante">
+                <i class="fas fa-info-circle"></i> <strong>Sabías que:</strong> El cuerpo humano contiene unos 5 litros de sangre. Perder más de 1 litro puede ser peligroso.
+            </div>
+        </div>
+
+        <div class="paso-emergencia">
+            <h3><i class="fas fa-child"></i> Atragantamiento</h3>
+            <ul class="lista-primeros-auxilios">
+                <li><strong>Señales de atragantamiento:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>La persona se lleva las manos al cuello</li>
+                        <li>No puede hablar, toser o respirar</li>
+                        <li>Hace sonidos agudos al intentar respirar</li>
+                        <li>Piel azulada (cianosis)</li>
+                    </ul>
+                </li>
+                <li><strong>Para adultos y niños mayores:</strong>
+                    <ol style="margin-top: 10px; padding-left: 20px;">
+                        <li>Párate detrás y rodea su cintura con tus brazos</li>
+                        <li>Haz un puño y colócalo arriba del ombligo</li>
+                        <li>Sujeta tu puño con la otra mano</li>
+                        <li>Empuja hacia adentro y hacia arriba (maniobra de Heimlich)</li>
+                        <li>Repite hasta que el objeto salga o la persona pierda el conocimiento</li>
+                    </ol>
+                </li>
+                <li><strong>Si la persona pierde el conocimiento:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Inicia RCP</li>
+                        <li>Llama al <span class="numero-emergencia">911</span></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="advertencia">
+                <i class="fas fa-exclamation-triangle"></i> <strong>Prevención:</strong> Corta los alimentos en trozos pequeños para niños y ancianos, y evita que hablen o se rían mientras comen.
+            </div>
+        </div>
+
+        <div class="paso-emergencia">
+            <h3><i class="fas fa-bolt"></i> Electrocución</h3>
+            <ul class="lista-primeros-auxilios">
+                <li><strong>1. No toques a la persona:</strong> Hasta estar seguro que no hay corriente</li>
+                <li><strong>2. Corta la electricidad:</strong> Usa el interruptor o desenchufa</li>
+                <li><strong>3. Si no puedes cortar la corriente:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Usa un objeto no conductor (madera, plástico) para separar a la persona</li>
+                        <li>No uses objetos metálicos o húmedos</li>
+                    </ul>
+                </li>
+                <li><strong>4. Evalúa a la persona:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Verifica respiración y conciencia</li>
+                        <li>Busca quemaduras en puntos de entrada/salida</li>
+                    </ul>
+                </li>
+                <li><strong>5. Busca ayuda médica:</strong> Incluso si parece estar bien, puede haber daño interno</li>
+            </ul>
+            <div class="consejo-rapido">
+                <b>Recuerda:</b> El agua es excelente conductora de electricidad. Nunca uses aparatos eléctricos con las manos mojadas o en zonas húmedas.
+            </div>
+        </div>
+
+        <div class="paso-emergencia">
+            <h3><i class="fas fa-skull"></i> Intoxicaciones</h3>
+            <ul class="lista-primeros-auxilios">
+                <li><strong>1. Identifica la sustancia:</strong> Busca envases o restos</li>
+                <li><strong>2. Llama a toxicología:</strong> <span class="numero-emergencia">01-800-00-222-22</span></li>
+                <li><strong>3. No induzcas el vómito:</strong> A menos que lo indique el especialista</li>
+                <li><strong>4. Para intoxicación por inhalación:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Lleva a la persona al aire libre</li>
+                        <li>No entres sin protección si hay gases tóxicos</li>
+                    </ul>
+                </li>
+                <li><strong>5. Para contacto con piel/ojos:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Lava con abundante agua durante 15-20 minutos</li>
+                        <li>Quita la ropa contaminada</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="informacion-importante">
+                <i class="fas fa-info-circle"></i> <strong>Dato clave:</strong> Mantén los productos tóxicos en sus envases originales y fuera del alcance de niños.
+            </div>
+        </div>
+    </section>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="adulto-mayor.html" class="boton-adultos-mayores">
+            <i class="fas fa-arrow-right"></i> Ver guía especial para adultos mayores
+        </a>
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd;">
+        <p>Esta información es de carácter educativo y no sustituye la atención médica profesional. Consulta siempre con un especialista.</p>
+        <p>Actualizado: <span id="fecha-actual"></span></p>
+    </footer>
+
+    <script>
+        // Mostrar la fecha actual
+        const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('fecha-actual').textContent = new Date().toLocaleDateString('es-ES', opcionesFecha);
+    </script><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeros Auxilios para Adultos Mayores</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --color-emergencia: #dc3545;
+            --color-informativo: #17a2b8;
+            --color-exito: #28a745;
+            --color-advertencia: #ffc107;
+            --fondo-claro: #f8f9fa;
+            --texto-oscuro: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--color-emergencia);
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: var(--color-emergencia);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--color-emergencia);
+            border-bottom: 2px solid var(--color-emergencia);
+            padding-bottom: 5px;
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--color-informativo);
+            margin-top: 25px;
+            font-size: 1.4rem;
+        }
+        
+        .contenedor-principal {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .contenido-principal {
+            flex: 3;
+        }
+        
+        .sidebar {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: fit-cont
